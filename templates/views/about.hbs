@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - NodeAuth</title>
+    {{>header}}
+</head>
+<body>
+    <div class="bg-orb orb-left"></div>
+    <div class="bg-orb orb-right"></div>
+
+    <header class="header">
+        <nav class="navbar">
+            <h2 class="logo"><a href="/">NodeAuth</a></h2>
+            <ul class="links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">Dashboard</a></li>
+            </ul>
+
+            <div class="buttons">
+                <span class="welcome-pill">Welcome, {{username}}</span>
+                <a href="/logout" class="signup">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard-wrap">
+        <section class="dashboard-hero">
+            <p class="kicker">Private User Area</p>
+            <h1>Welcome back, {{username}}</h1>
+            <p>This dashboard is accessible only after successful signin. You can manage your account and password securely.</p>
+            <div class="buttons hero-cta">
+                <a href="/forgot-password" class="learn">Reset Password</a>
+                <a href="/logout" class="signup">Logout</a>
+            </div>
+        </section>
+
+        <section class="dashboard-cards">
+            <article class="dashboard-card">
+                <h3>Authentication</h3>
+                <p>Your session is protected using JWT token and HTTP-only cookie.</p>
+            </article>
+            <article class="dashboard-card">
+                <h3>Identity</h3>
+                <p>Logged in user: <strong>{{username}}</strong></p>
+            </article>
+            <article class="dashboard-card">
+                <h3>Security</h3>
+                <p>Use forgot password flow anytime to regenerate and update your password.</p>
+            </article>
+        </section>
+    </main>
+
+    {{>toast}}
+</body>
+</html>

@@ -1,0 +1,100 @@
+{{#if flashMessage}}
+  <style>
+    .toast-wrap {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      max-width: 360px;
+      width: calc(100% - 40px);
+    }
+
+    .app-toast {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      border-radius: 12px;
+      padding: 14px 16px;
+      box-shadow: 0 18px 35px rgba(14, 27, 73, 0.25);
+      border: 1px solid transparent;
+      transform: translateY(-16px);
+      opacity: 0;
+      transition: all 0.25s ease;
+    }
+
+    .app-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .app-toast.success {
+      background: #ecfdf3;
+      border-color: #86efac;
+      color: #14532d;
+    }
+
+    .app-toast.error {
+      background: #fef2f2;
+      border-color: #fca5a5;
+      color: #7f1d1d;
+    }
+
+    .toast-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-top: 6px;
+      background: currentColor;
+    }
+
+    .toast-body {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .toast-close {
+      border: none;
+      background: transparent;
+      color: inherit;
+      font-size: 18px;
+      line-height: 1;
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    .toast-close:hover {
+      opacity: 1;
+    }
+  </style>
+
+  <div class="toast-wrap" id="toastWrap">
+    <div
+      class="app-toast {{flashType}}"
+      id="appToast"
+      role="status"
+      aria-live="polite"
+    >
+      <span class="toast-dot"></span>
+      <div class="toast-body">{{flashMessage}}</div>
+      <button
+        type="button"
+        class="toast-close"
+        id="toastClose"
+        aria-label="Close"
+      >&times;</button>
+    </div>
+  </div>
+
+  <script>
+    (function () { var toast = document.getElementById("appToast"); var closeBtn
+    = document.getElementById("toastClose"); if (!toast) return;
+    window.requestAnimationFrame(function () { toast.classList.add("show"); });
+    var hideToast = function () { toast.classList.remove("show");
+    setTimeout(function () { var wrap = document.getElementById("toastWrap"); if
+    (wrap) wrap.remove(); }, 250); }; var autoTimer = setTimeout(hideToast,
+    3500); if (closeBtn) { closeBtn.addEventListener("click", function () {
+    clearTimeout(autoTimer); hideToast(); }); } })();
+  </script>
+{{/if}}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="Authentication security illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6efff"/>
+      <stop offset="1" stop-color="#cddcff"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5d84ff"/>
+      <stop offset="1" stop-color="#2f63f2"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef3ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="620" rx="30" fill="url(#bg)"/>
+  <circle cx="120" cy="80" r="40" fill="#9eb9ff" opacity="0.45"/>
+  <circle cx="800" cy="520" r="72" fill="#8ea9ff" opacity="0.35"/>
+
+  <rect x="120" y="140" width="660" height="360" rx="26" fill="url(#card)" stroke="#b3c7ff" stroke-width="2"/>
+
+  <path d="M450 175l125 42v95c0 108-84 169-125 188-41-19-125-80-125-188v-95l125-42z" fill="url(#shield)"/>
+  <path d="M450 224a48 48 0 0 1 48 48v20h18a14 14 0 0 1 14 14v58a14 14 0 0 1-14 14H384a14 14 0 0 1-14-14v-58a14 14 0 0 1 14-14h18v-20a48 48 0 0 1 48-48zm0 26a22 22 0 0 0-22 22v20h44v-20a22 22 0 0 0-22-22z" fill="#ffffff"/>
+
+  <rect x="180" y="425" width="190" height="20" rx="10" fill="#c8d8ff"/>
+  <rect x="180" y="455" width="260" height="16" rx="8" fill="#d9e4ff"/>
+  <rect x="530" y="425" width="190" height="20" rx="10" fill="#c8d8ff"/>
+  <rect x="530" y="455" width="150" height="16" rx="8" fill="#d9e4ff"/>
+
+  <text x="450" y="545" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="34" font-weight="700" fill="#2f63f2">Node Authentication</text>
+</svg>
