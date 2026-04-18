@@ -6,6 +6,7 @@ NodeAuth is a Node.js and Express authentication project built with JWT, MongoDB
 
 - JWT-based authentication with HTTP-only cookies
 - Signup and signin flow
+- NodeAuth is a secure
 - Username shown in the header after login
 - Logout and session cleanup
 - Forgot password and reset password flow
@@ -101,7 +102,7 @@ http://localhost:1000
 
 ## Authentication Flow
 
-1. User signs up with username and password.
+1. User signs up with username and password .
 2. The password is hashed using bcrypt before saving.
 3. A JWT token is generated and stored in an HTTP-only cookie.
 4. The dashboard/home page reads the token and shows the username in the header.
